@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="15sp"
+    android:background="@drawable/newback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_lamp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-80dp"
+        android:layout_marginBottom="50sp"
+        android:gravity="center"
+        android:text="@string/precisando_de_um_uma_recomenda_o_temos_v_rias_para_voc"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:background="@drawable/rounded">
+
+        <TextView
+            android:id="@+id/descri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/fa_a_seu_login"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLoginLayout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/descri"
+            app:startIconDrawable="@drawable/ic_alternative_email"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailLoginField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/e_mail"
+                android:inputType="text|textEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLoginLayout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/emailLoginLayout"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_lock_gray"
+            android:layout_marginBottom="10sp"
+            app:passwordToggleEnabled="true"
+            tools:ignore="NotSibling">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordLoginField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/senha_login"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorHint="#000000"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/rememberMe"
+            android:layout_width="170sp"
+            android:layout_height="40sp"
+            android:layout_below="@id/passwordLoginLayout"
+            android:layout_marginTop="-10dp"
+            android:text="@string/lembrar_da_conta"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rememberMe"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#6690B1"
+            android:onClick="validateAuth"
+            android:text="@string/entrar_na_conta"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/signUpText"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:onClick="goToSingUp"
+            android:text="Não tem conta? Crie aqui"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    <ImageButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/admpage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded"
+        android:src="@drawable/ic_lock_gray"/>
+
+        <TextView
+            android:id="@+id/admText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/admpage"
+            android:text="@string/adms"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
